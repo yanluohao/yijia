@@ -1,4 +1,5 @@
 $(function(){
+	//第一个轮播图
    var myindex=0;
    $("#container .btns span").hover(
    	function(){
@@ -39,7 +40,7 @@ $(function(){
 
    time_1=setInterval(nextpic,2000);
 
-
+    //第二个轮播图
    var container = $('#container2');
    var list = $('.displaypic1');
    var buttons = $('.displaybtn span');
@@ -128,5 +129,39 @@ $(function(){
    container.hover(stop, play);
 
    play();
+
+
+   $("#slidebar ul li").hover(function(){
+   	$(this).animate({
+   		right:76                                   //侧边栏
+   	})
+   },function(){
+   	$(this).animate({
+   		right:0
+   	})
+   })
+
+ 
+   //回到顶部
+   $(window).scroll(
+   	function(){
+   		var wHeight=document.documentElement.clientHeight||document.body.clientHeight;
+   		var sTop=document.body.scrollTop||document.documentElement.scrollTop;
+   		if(1200<wHeight+sTop){
+   			 $(".scrolltoTop").show();
+   		}
+   		else{
+   			 $(".scrolltoTop").hide();
+   		}
+   	}
+   	)
+
+    $(".scrolltoTop").click(function(){
+    	var speed=500;
+    	$("body").animate({
+    		scrollTop:0
+    	},speed)
+    })
+
 })
 
