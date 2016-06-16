@@ -14,6 +14,10 @@ button, input, select, textarea{ /* for ie */
     /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
     font:12px/1.6 tahoma,arial,sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
 }
+img{
+	border: 0;
+	outline: 0;
+}
 ul,li{
 	list-style-type: none;
 }
